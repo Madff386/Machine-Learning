@@ -1,26 +1,26 @@
 # Machine-Learning
 
-##check_NN_gradients
+## check_NN_gradients
 
-##compute numerical gradient
+## compute numerical gradient
 
-##feature normalise
+## feature normalise
 
-##fmincg
+## fmincg
 
-##nn cost function
+## nn cost function
 
-##predict
+## predict
 
-##rand initialise weights
+## rand initialise weights  
 
-##sigmoid
-Input: z
-Output: g
+## sigmoid  
 Computes the sigmoid function
+ - Input: z
+ - Output: g
 
-##sigmoid gradient 
-Input: z
-Output: g
-Functions called: sigmoid()
+## sigmoid gradient  
 Computes the gradient of the sigmoid function
+ - Input: z
+ - Output: g
+ - Functions called: sigmoid()
