@@ -13,12 +13,16 @@
 ## predict
 
 ## rand initialise weights  
+Randomly initialises the weights for one layer
+ - input: l_in - input nodes for that layer, l_out - output nodes for that layer
+ - output: w - matrix of weights
+ - functions called: none
 
 ## sigmoid  
 Computes the sigmoid function
  - Input: z
  - Output: g
-
+ - Functions called: none
 ## sigmoid gradient  
 Computes the gradient of the sigmoid function
  - Input: z
