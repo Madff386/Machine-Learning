@@ -1,10 +1,16 @@
 # Machine-Learning
 
-## check_NN_gradients
-
 ## compute numerical gradient
+Computes a numerical estimate of the gradient
+ - input: theta, J
+ - output: num_grad
+ - functions called: none
 
 ## feature normalise
+Normalises x so that mean is 0 and standard deviation is 1
+ - input: x
+ - output: x_norm, Mu, sigma
+ - functions called: none
 
 ## fmincg
 
