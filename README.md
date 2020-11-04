@@ -10,7 +10,15 @@
 
 ## nn cost function
 
+ - input: nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, lambda
+ - output: J, grad
+ - functions called: sigmoid(), sigmoid_gradient()
+
 ## predict
+predicts output for multiclass clasification three layer NN 
+ - input: Theta_1, Theta_2, x
+ - output: p
+ - functions used: sigmoid()
 
 ## rand initialise weights  
 Randomly initialises the weights for one layer
