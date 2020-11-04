@@ -1,21 +1,19 @@
 # Machine-Learning
 
+## check_NN_gradients
+
 ## compute numerical gradient
-Computes a numerical estimate of the gradient
- - input: theta, J
- - output: num_grad
- - functions called: none
 
 ## feature normalise
-Normalises x so that mean is 0 and standard deviation is 1
- - input: x
- - output: x_norm, Mu, sigma
- - functions called: none
 
 ## fmincg
+optimise the cost function use x = fmincg(@nn_cost_function, X)
+ - input: 
+ - output:
+ - functions called: none
 
 ## nn cost function
-
+computes the cost function and gradient of a set of paramaters and X and y, for multiclass classification with num_labels.
  - input: nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, lambda
  - output: J, grad
  - functions called: sigmoid(), sigmoid_gradient()
