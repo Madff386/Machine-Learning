@@ -1,7 +1,5 @@
 # Machine-Learning
 
-## check_NN_gradients
-
 ## compute numerical gradient
 
 ## feature normalise
