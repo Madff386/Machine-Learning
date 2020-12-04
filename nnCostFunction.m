@@ -61,11 +61,7 @@ Theta2_grad = zeros(size(Theta2));
 %               the regularization separately and then add them to Theta1_grad
 %               and Theta2_grad from Part 2.
 %
-Y = zeros(m, num_labels);
-for k = 1:num_labels
-    Y(:,k) = y==k;
-    
-end
+Y = y
 
 %feed forward
 a1 = [ones(m, 1), X];
