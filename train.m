@@ -3,13 +3,13 @@ function nn_params = train(X, y, hidden_layer_size, lambda, max_iter)
 
 m = size(X, 1);
 n = size(X, 2);
-ouput_layer_size = size(y, 2);
+output_layer_size = size(y, 2);
 
 
 
 
 initial_theta_1 = randInitializeWeights(n, hidden_layer_size);
-initial_theta_2 = randInitializeWeights(hidden_layer_size, ouput_layer_size);
+initial_theta_2 = randInitializeWeights(hidden_layer_size, output_layer_size);
 initial_params = [initial_theta_1(:) ; initial_theta_2(:)];
 
 
