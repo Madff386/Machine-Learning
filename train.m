@@ -15,5 +15,5 @@ initial_params = [initial_theta_1(:) ; initial_theta_2(:)];
 
 
 options = optimset("MaxIter", max_iter);
-costFunction = @(p) nnCostFunction(p, n, hidden_layer_size, num_labels, X ,y, lambda);
+costFunction = @(p) nnCostFunction(p, n, hidden_layer_size, output_layer_size, X ,y, lambda);
 [nn_params, ~ ] = fmincg(costFunction, initial_params, options);
