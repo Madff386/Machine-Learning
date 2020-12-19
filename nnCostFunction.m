@@ -19,18 +19,18 @@ disp start_of_nncost
 % for our 2 layer neural network
 Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
-disp 22
+
 Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
                  num_labels, (hidden_layer_size + 1));
-disp 25
+
 % Setup some useful variables
 m = size(X, 1);
-disp 28        
+   
 % You need to return the following variables correctly 
 J = 0;
 Theta1_grad = zeros(size(Theta1));
 Theta2_grad = zeros(size(Theta2));
-disp 33
+
 % ====================== YOUR CODE HERE ======================
 % Instructions: You should complete the code by working through the
 %               following parts.
@@ -66,14 +66,15 @@ disp 33
 
 %feed forward
 a1 = [ones(m, 1), X];
-disp 69
+whos Theta1
+whos Theta2
 z2 = a1*Theta1';
 a2 = [ones(m, 1), sigmoid(z2)];
-disp 72
+
 z3 = a2*Theta2';
 a3 = sigmoid(z3);
 h = a3;
-disp 76
+
 %cost
 C = (-Y.*log(h))-((1-Y).*log(1-h));
 R1 = Theta1(:,2:end).^2;
@@ -81,14 +82,14 @@ R2 = Theta2(:,2:end).^2;
 reg = lambda/(2*m)*(sum(sum(R1))+sum(sum(R2)));
 
 J = (1/m)*sum(sum(C))+reg;
-disp 84
+
 
 
 %back prop
 
 Delta1 = zeros(hidden_layer_size, input_layer_size+1);
 Delta2 = zeros(num_labels, hidden_layer_size+1);
-disp 91
+
 for t = 1:m
     delta3 = a3(t,:) - Y(t, :); %1,10
     delta2 = delta3*Theta2(:,2:end).*sigmoidGradient(z2(t,:)); %1,25
@@ -97,13 +98,13 @@ for t = 1:m
     Delta1 = Delta1 + delta2'.*a1(t, :);
     %test
 end
-disp 100
+
 Theta1_grad = Delta1./m + lambda/m.*Theta1;
 Theta1_grad(:, 1) = Delta1(:, 1)./m;
 Theta2_grad = Delta2./m + lambda/m.*Theta2;
 Theta2_grad(:, 1) = Delta2(:, 1)./m;
 
-disp 106
+
 
 
 
@@ -115,6 +116,6 @@ disp 106
 
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
-disp end_of_nncost
+
 
 end
